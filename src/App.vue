@@ -1,28 +1,28 @@
 <template>
-  <ul>
-    <li v-for="(user) in users" :key="user.id">
-      {{user.id}}:{{user.name}}
-    </li>
-  </ul>
+  <div>
+    <h2>users</h2>
+    <ul>
+      <li v-for="(user) in users" :key="user.id">{{user.id}}:{{user.name}}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
-  name: 'app',
-  data(){
+  name: "app",
+  data() {
     return {
-      users:[]
-    }
+      users: []
+    };
   },
-  mounted(){
-    axios.get('http://81.70.4.241:3005/api/users').then(response=>{
+  mounted() {
+    axios.get("http://81.70.4.241:3005/api/users").then(response => {
       this.users = response.data;
     });
   }
-}
+};
 </script>
 
 <style>
-
 </style>
