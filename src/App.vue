@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>users</h2>
-    <h3>test</h3>
     <ul>
       <li v-for="(user) in users" :key="user.id">{{user.id}}:{{user.name}}</li>
     </ul>
