@@ -3,6 +3,7 @@
     <h2>users</h2>
     <div>sdkljflksljfl</div>
     <h3>啊啊啊啊啊</h3>
+    <div>使用打包后的文件运行</div>
     <ul>
       <li v-for="(user) in users" :key="user.id">{{user.id}}:{{user.name}}</li>
     </ul>
